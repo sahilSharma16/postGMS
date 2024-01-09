@@ -1,0 +1,64 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+<form:SimpleForm
+                    title="Nomination"
+                        editable="true"
+                    >
+                    <Label
+                    text="Nomination Key"
+                    labelFor="Nomination"
+                    design="Bold"
+                    />
+                    <Input
+                    id="nomination_id"
+                    value="{nomData>/NominationKey}"
+                    />
+                    <Label
+                    text="Path"
+                    labelFor="path"
+                    design="Bold"
+                    />
+                    <Input
+                    id="path_id"
+                    value="{nomData>/Path}"
+                    showValueHelp="true"
+                    valueHelpRequest="onPath"
+                    valueHelpOnly="true"
+                    />
+                    <Label
+                    text="Rank"
+                    labelFor="rank"
+                    design="Bold"
+                    />
+                    <Input
+                    id="rank_id"
+                    value="{nomData>/Rank}"
+                    showValueHelp="true"
+                    valueHelpRequest="onRank"
+                    valueHelpOnly="true"
+                    />
+                    <Label
+                    text="Service Type"
+                    labelFor="ServiceType"
+                    design="Bold"
+                    />
+                    <Input
+                    id="serv_id"
+                    value="{nomData>/ServiceType}"
+                    />
+                       
+                    </form:SimpleForm>
+                    <Button
+                    text="Submit"
+                    width="230px"
+                    press="onSubmit"
+                    class="sapUiSmallMarginBottom"
+                    ariaHasPopup="Dialog"
+                    />
+               
+        </content>
+    </Page>
+</mvc:View>
